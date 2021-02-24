@@ -18,8 +18,8 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-    def create_super_user(self, email, name, password):
-        """Create and save a new superuser with given details"""
+    def create_superuser(self, email, name, password):
+        """Create and save a new superuser with given details. This is an overriden function"""
         user = self.create_user(email, name, password)
 
         user.is_superuser = True
